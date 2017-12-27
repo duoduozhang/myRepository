@@ -1,0 +1,72 @@
+/*==========rest css===========*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    /*防止内容溢出 以后所有的宽度高度的设置计算的起始位置是边框*/
+    box-sizing: border-box;
+    /*点击高亮现象 去除*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", sans-serif;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="pasword"]
+,textarea{
+    border: none;
+    outline: none;
+    /*文本域 不缩放*/
+    resize: none;
+    /*表单元素 重置默认样式  比如在safari 立体样式 */
+    -webkit-appearance: none;
+}
+/*==========common css===========*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+.ml10{
+    margin-left:10px;
+}
+.mr10{
+    margin-right:10px;
+}
+.mt10{
+    margin-top:10px;
+}
+.mb10{
+    margin-bottom:10px;
+}
+
+[class^="icon_"],[class*=" icon_"]{
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    /*background-size 百分比 基于元素 不是基于背景图尺寸*/
+    background-size: 200px 200px;
+}
